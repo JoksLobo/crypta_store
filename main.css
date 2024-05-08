@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+}
+
+header >.container-flex,
+footer .container-flex {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px;
+background-color: black;
+color: antiquewhite;
+font-family: "Metal Mania", system-ui;
+text-transform: uppercase;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header img {
+    height: 60px;
+}
+
+header li {
+    display: inline;
+    list-style: none;
+    margin-right: 16px;
+}
+
+header li a {
+    text-decoration-line: none;
+    color: antiquewhite;
+}
+
+.sobre-a-loja img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #000;
+    font-family: "Metal Mania", system-ui;
+}
+
+.lista-discos ul{
+    display: grid;
+    grid-template-columns: repeat( 4 , 24.5%);
+    column-gap: 1%;
+}
+
+.lista-discos li {
+    list-style: none;
+    margin-bottom: 24px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.lista-discos li img {
+    max-width: 100%;
+}
+
+.lista-discos li h3 {
+    margin: 16px 0;
+}
+
+.lista-discos button {
+    display: block;
+    width: 100%;
+    padding: 8% 0;
+    border: none;
+    background-color: #000;
+    font-size: 20px;
+    color: antiquewhite;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: "Metal Mania", system-ui;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer li a img{
+    height: 33px;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+        display: block;
+    }
+
+    header > .container-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 16px;
+    }
+
+    header > .container-flex img {
+        display: none;
+    }
+
+    header > .container-flex li{
+        margin-right: 2px;
+    }
+
+    .sobre-a-loja {
+        display: flex;
+    }
+
+    .sobre-a-loja img{
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista ul {
+        display: block;
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .sobre-a-loja .container-flex{
+        display: block;
+    }
+
+    .sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista .container-flex {
+        display: grid;
+        grid-template-columns: repeat(2,49%);
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+}
